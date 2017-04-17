@@ -1,0 +1,9 @@
+<button (click)="displayDetails()">Display Details</button>
+<p *ngIf="displayText()">password=tuna</p>
+<ul>
+  <li *ngFor="let note of notes"
+      [ngStyle]="{backgroundColor: note >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': note  >= 5}">
+    {{note}}
+  </li>
+</ul>
